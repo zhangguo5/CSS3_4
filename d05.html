@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>双飞翼</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body,
+			html {
+				height: 100%;
+				font: 20px/40px "microsoft yahei";
+				color: white;
+			}
+			
+			#container {
+				width: 90%;
+				margin: 0 auto;
+				height: 100%;
+			}
+			
+			#header,
+			#footer {
+				height: 12.5%;
+				background: deepskyblue;
+			}
+			
+			#main {
+				height: 75%;
+			}
+			
+			#center,
+			#left,
+			#right {
+				height: 100%;
+				float: left;
+			}
+			
+			#center {
+				width: 100%;
+				background: lightgreen;
+			}
+			
+			#right {
+				background: lightblue;
+				width: 20%;
+				margin-left: -20%;
+			}
+			
+			#left {
+				background: lightcoral;
+				width: 20%;
+				margin-left: -100%;
+			}
+			
+			#main-inner {
+				padding-left: 20%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				header
+			</div>
+			<div id="main">
+				<div id="center">
+					<div id="main-inner">
+						center
+					</div>
+				</div>
+				<div id="left">
+					left
+				</div>
+				<div id="right">
+					right
+				</div>
+			</div>
+			<div id="footer">
+				footer
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>负边距</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#div1 {
+				height: 100px;
+				background: lightblue;
+				width: 100%;
+				float: left;
+			}
+			
+			#div2 {
+				height: 100px;
+				background: lightgreen;
+				width: 30%;
+				float: left;
+				margin-left: -100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">div1
+		</div>
+		<div id="div2">div2
+		</div>
+	</body>
+
+</html>

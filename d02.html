@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>负边距</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#div1 {
+				width: 800px;
+				margin: 0 auto;
+				border: 5px solid lightblue;
+				overflow: hidden;
+				margin-top: 10px;
+			}
+			.box {
+				width: 180px;
+				height: 180px;
+				margin: 0 20px 20px 0;
+				background: lightgreen;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div class="box">
+				</div>
+				<div class="box">
+				</div>
+				<div class="box">
+				</div>
+				<div class="box">
+				</div>
+				<div class="box">
+				</div>
+				<div class="box">
+				</div>
+				<div class="box">
+				</div>
+				<div class="box">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

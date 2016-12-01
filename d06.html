@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>栅格系统</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			#container {
+				width: 980px;
+				margin: 0 auto;
+				height: 10%;
+			}
+			
+			#container div {
+				height: 100%;
+			}
+			
+			.col25 {
+				width: 25%;
+				background: lightgreen;
+				float: left;
+			}
+			
+			.col50 {
+				width: 50%;
+				background: lightblue;
+				float: left;
+			}
+			
+			.col75 {
+				width: 75%;
+				background: lightcoral;
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div class="col50">
+				A
+			</div>
+			<div class="col50">
+				B
+			</div>
+			<div class="col25">
+				C
+			</div>
+		</div>
+	</body>
+
+</html>

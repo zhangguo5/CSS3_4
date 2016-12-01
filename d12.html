@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			html,
+			body {
+				height: 100%;
+				padding-top :20px;
+			}
+			#menu {
+				margin: 0 auto;
+				display: flex;
+				/*当前块为弹性盒*/
+				flex-flow: column-reverse;
+				height: 200px;
+				overflow: hidden;
+			}
+			#menu li{
+				border: 1px solid cornflowerblue;
+				margin-bottom: 5px;
+				text-align: center;
+			}
+			#menu li a {
+				text-decoration: none;
+				vertical-align: middle;
+			}
+			.a{
+				flex: 1;
+			}
+			.b{
+				flex: 2;
+			}
+			.c{
+				flex: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="menu">
+			<li class="a">
+				<a href="#" class="item">A公司简介</a>
+			</li>
+			<li class="b">
+				<a href="#" class="item">B商品展示</a>
+			</li>
+			<li class="c">
+				<a href="#" class="item">C后台管理</a>
+			</li>
+		</ul>
+	</body>
+</html>
