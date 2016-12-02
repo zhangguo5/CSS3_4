@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.grid {
+				width: 1000px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			
+			.grid-item {}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/masonry.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
+		<div class="grid">
+			<div class="grid-item">
+				<a href="#"><img src="img/h/h(1).jpg" width="200px" /></a>
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(2).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(3).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(4).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(5).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(6).jpg" width="200px" height="300" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(7).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(8).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(9).jpg" width="200px" height="300" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(10).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(11).jpg" width="200px" />
+			</div>
+			<div class="grid-item">
+				<img src="img/h/h(12).jpg" width="200px" height="300" />
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				setTimeout(init,1000);
+			});
+
+			function init() {
+				var msnry = new Masonry('.grid', {
+					itemSelector: '.grid-item', //class 选择器
+					columnWidth: 210, //一列的宽度 Integer
+					isAnimated: false, //使用jquery的布局变化  Boolean
+					animationOptions: {
+						//jquery animate属性 渐变效果  Object { queue: false, duration: 500 }
+					},
+					gutterWidth: 0, //列的间隙 Integer
+					isFitWidth: true, // 适应宽度   Boolean
+					isResizableL: false, // 是否可调整大小 Boolean
+					isRTL: false, //使用从右到左的布局 Boolean
+				});
+			}
+		</script>
+	</body>
+
+</html>

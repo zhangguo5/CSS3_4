@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>无限翻页效果</title>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/infinite-scroll/jquery.infinitescroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/infinite-scroll/test/debug.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(document).ready(function() { //别忘了加这句，除非你没学Jquery  
+				$("#container").infinitescroll({
+						navSelector: "#navigation", //页面分页元素--成功后自动隐藏  
+						nextSelector: "#navigation a",
+						itemSelector: "body",
+						animate: true,
+						maxPage: 3
+					},
+					function(newElements) { //回调函数，用Masonry布局
+						//var $newElems = $(newElements);
+						//$('#container').masonry('appended', $newElems);
+						alert("callback");
+					});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="container" style="height: 2000px;">
+			<!-- 容器 -->
+			<div class="scroll">
+				<!-- 每次要加载数据的数据块-->
+				第一页内容第一页内容<br> 第一页内容
+				<br>第一页内容<br>第一页内容<br> 第一页内容
+				<br>第一页内容<br>第一页内容<br> 第一页内容
+				<br>第一页内容<br>第一页内容
+			</div>
+		</div>
+		<div id="navigation" align="center">
+			<!-- 页面导航-->
+			<a href="d01.html?page=1">下一页</a>
+			<!-- 此处可以是url，可以是action，要注意不是每种html都可以加，是跟当前网页有相同布局的才可以。另外一个重要的地方是page参数，这个一定要加在这里，它的作用是指出当前页面页码，没加载一次数据，page自动+1,我们可以从服务器用request拿到他然后进行后面的分页处理。-->
+		</div>
+	</body>
+
+</html>
+
+<!--
+debug : true, //用于调试，如果需要用到，只需在网页头引入官网demo里的debug.js文件 loadingImg : "/img/loading.gif", //加载时候显示的进度条，用户可以自定义 loadingText : "Loading new posts...", //加载时显示的文字 extraScrollPx: 50, //离网页底部多少像素时触发ajax donetext : "I think we've hit the end, Jim" , //加载完数据(到达底部时)显示的文字提醒 errorCallback: function(){}, //加载完数据后的回调函数，可选
+-->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1 {
+				height: 3000px;
+				background: lightgreen;
+				margin: 0 auto;
+				width: 900px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+
+		</div>
+		<nav id="page-nav">
+			<a href="2.html"></a>
+		</nav>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/infinite-scroll/jquery.infinitescroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/infinite-scroll/test/debug.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#div1').infinitescroll({
+				navSelector: '#page-nav',
+				nextSelector: '#page-nav a', //下一页选择器
+				// other options
+				dataType: 'json',
+				appendCallback: false
+			}, function(json, opts) {
+				// Get current page
+				var page = opts.state.currPage;
+				// Do something with JSON data, create DOM elements, etc ..
+				alert(page);
+				return false;
+			});
+		</script>
+	</body>
+
+</html>

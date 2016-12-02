@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>imagesLoaded – 检测网页中的图片是否加载</title>
+	</head>
+
+	<body>
+		<div id="div1">
+			<img src="img/h/h(2).jpg" width="300" /><img src="img/h/h(1).jpg" width="300" />
+		</div>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/imagesloaded-master/imagesloaded.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			imagesLoaded(document.querySelector('#div1'), function(instance) {
+				alert('所有的图片都加载完成了');
+			});
+
+			$('#div1').imagesLoaded()
+				.always(function(instance) {
+					console.log('all images loaded');
+				})
+				.done(function(instance) {
+					console.log('all images successfully loaded');
+				})
+				.fail(function() {
+					console.log('all images loaded, at least one is broken');
+				})
+				.progress(function(instance, image) {
+					var result = image.isLoaded ? 'loaded' : 'broken';
+					console.log('image is ' + result + ' for ' + image.img.src);
+				});
+		</script>
+	</body>
+
+</html>

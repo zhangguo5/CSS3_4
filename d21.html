@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1 {
+				height: 3000px;
+				background: lightgreen;
+				margin: 0 auto;
+				width: 900px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			<nav id="page-nav">
+				<a href="2.html"></a>
+			</nav>
+		</div>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/infinite-scroll/jquery.infinitescroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/infinite-scroll/test/debug.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#container').infinitescroll({
+						navSelector: '#page-nav',
+						nextSelector: '#page-nav a', //下一页选择器
+						itemSelector: ".box", //下一页中需要被加载进当前页的块
+						loading: { //加载效果
+							finishedMsg: 'No more pages to load',
+							img: 'http://i.imgur.com/6RMhx.gif'
+						}
+					},
+					function(newElements) { //回调函数，用Masonry布局
+						var $newElems = $(newElements);
+						$('#container').masonry('appended', $newElems);
+					}
+				);
+			});
+		</script>
+	</body>
+
+</html>

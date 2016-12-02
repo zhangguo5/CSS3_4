@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.item {
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>产品列表</h2>
+		<div id="items">
+			<p class="item">产品一</p>
+			<p class="item">产品一</p>
+			<p class="item">产品一</p>
+			<p class="item">产品一</p>
+			<p class="item">产品一</p>
+			<p class="item">产品一</p>
+		</div>
+		<a href="p2.html" id="next">下一页</a>
+		<script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/infinite-scroll/jquery.infinitescroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#items').infinitescroll({
+				navSelector: "#next",  // 页面分页元素(成功后会被隐藏)
+				nextSelector: "a#next",  // 需要点击的下一页链接，和2的html要对应
+				itemSelector: ".item",  // ajax回来之后，每一项的selecter，比如每篇文章都有item这个class
+				debug: true,  //是否调试
+				dataType: 'html',  //数据类型
+				maxPage: 3,  //最大页数
+				path: function(index) {  //路径
+						return "p" + index + ".html";
+				}
+			}, function(newElements, data, url) {  //成功后的回调
+				//console.log("路径：" + url);
+				$(newElements).css('background-color', '#ffef00');
+				// $(this).append(newElements);
+			});
+		</script>
+	</body>
+
+</html>

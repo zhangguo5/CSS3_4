@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>瀑布流布局</title>
+		<style type="text/css">
+			#grid {
+				width: 1000px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="grid">
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(1).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(2).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(3).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(4).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(11).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(12).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(5).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(6).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(7).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(8).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(11).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(12).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(9).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(10).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(11).jpg" width="200" />
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="#">
+					<img src="img/h/h(12).jpg" width="200" />
+				</a>
+			</div>
+		</div>
+		<script src="js/masonry/masonry.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				var msnry = new Masonry('#grid', {
+					itemSelector: '.grid-item',
+					columnWidth: 200
+				});
+			}
+		</script>
+	</body>
+
+</html>

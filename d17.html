@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>瀑布流布局</title>
+		<style type="text/css">
+			#grid {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			.grid-item {
+				width: 200px;
+				float: left;
+			}
+			
+			.a {
+				background: lightblue;
+				height: 200px;
+			}
+			
+			.b {
+				background: lightcoral;
+				height: 300px;
+			}
+			
+			.c {
+				background: lightgreen;
+				height: 500px;
+			}
+			
+			.d {
+				background: lightsalmon;
+				height: 350px;
+			}
+			
+			.e {
+				background: lightseagreen;
+				height: 150px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="grid">
+			<div class="grid-item a">
+			</div>
+			<div class="grid-item b">
+			</div>
+			<div class="grid-item a">
+			</div>
+			<div class="grid-item b">
+			</div>
+			<div class="grid-item c">
+			</div>
+			<div class="grid-item d">
+			</div>
+			<div class="grid-item e">
+			</div>
+			<div class="grid-item c">
+			</div>
+			<div class="grid-item d">
+			</div>
+			<div class="grid-item a">
+			</div>
+			<div class="grid-item b">
+			</div>
+			<div class="grid-item a">
+			</div>
+			<div class="grid-item b">
+			</div>
+			<div class="grid-item a">
+			</div>
+			<div class="grid-item b">
+			</div>
+
+			<div class="grid-item d">
+			</div>
+			<div class="grid-item e">
+			</div>
+			<div class="grid-item c">
+			</div>
+			<div class="grid-item d">
+			</div>
+			<div class="grid-item e">
+			</div>
+			<div class="grid-item a">
+			</div>
+			<div class="grid-item b">
+			</div>
+			<div class="grid-item c">
+			</div>
+			<div class="grid-item d">
+			</div>
+			<div class="grid-item e">
+			</div>
+			<div class="grid-item c">
+			</div>
+			<div class="grid-item e">
+			</div>
+			<div class="grid-item c">
+			</div>
+			<div class="grid-item d">
+			</div>
+			<div class="grid-item e">
+			</div>
+		</div>
+		<script src="js/masonry/masonry.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var msnry = new Masonry('#grid', {
+				itemSelector: '.grid-item',
+				columnWidth: 200
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>相册</title>
+		<style type="text/css">
+			.item {
+				float: left;
+				min-height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>相册</h2>
+		<div id="items">
+			<p class="item"><img src="../img/i/1.jpg" /></p>
+			<p class="item"><img src="../img/i/2.jpg" /></p>
+			<p class="item"><img src="../img/i/3.jpg" /></p>
+			<p class="item"><img src="../img/i/4.jpg" /></p>
+			<p class="item"><img src="../img/i/5.jpg" /></p>
+			<p class="item"><img src="../img/i/6.jpg" /></p>
+		</div>
+		<a href="m2.json" id="next"></a>
+		<script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/infinite-scroll/jquery.infinitescroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#items').infinitescroll({
+				navSelector: "#next",
+				nextSelector: "a#next",
+				itemSelector: ".item",
+				debug: true,
+				dataType: 'json',
+				maxPage: 3,
+				appendCallback:false,
+				path: function(index) {
+					return "m" + index + ".json";
+				}
+			}, function(data) {
+				for(var i=0;i<data.length;i++){
+					$("<p class='item'><img src='../img/i/"+data[i]+".jpg' /></p>").appendTo("#items");
+				}
+			});
+		</script>
+	</body>
+</html>
