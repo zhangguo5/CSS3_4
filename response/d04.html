@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>响应式栅格</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font: 20px/20px "microsoft yahei";
+			}
+			
+			div {
+				min-height: 100px;
+			}
+			
+			.row {
+				width: 800px;
+				background: deepskyblue;
+				margin: 0 auto;
+			}
+			
+			.row:after {
+				content: ' ';
+				display: table;
+				clear: both;
+			}
+			
+			.col25 {
+				width: 25%;
+				background: lightgreen;
+			}
+			
+			.col50 {
+				width: 50%;
+				background: lightcoral;
+			}
+			
+			.col75 {
+				width: 75%;
+				background: lightblue;
+			}
+			
+			[class*=col] {
+				float: left;
+			}
+			/*0-480手机*/
+			
+			@media only screen and (max-width:480px) {
+				.row {
+					width: 100%;
+				}
+				[class*=col] {
+					float: none;
+					margin-top: 5px;
+					width: 100%;
+				}
+			}
+			/*480-960平板，手机横屏*/
+			@media only screen and (min-width: 480px) and (max-width: 960px) {
+				.row {
+					width: 480px;
+				}
+			}
+			/*960PC屏幕*/
+			@media only screen and (min-width:960px) {
+				.row {
+					width: 960px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="header" class="row">
+				header
+			</div>
+			<div id="main" class="row">
+				<div id="left" class="col25">left</div>
+				<div id="center" class="col50">center</div>
+				<div id="right" class="col25">right</div>
+			</div>
+			<div id="footer" class="row">
+				footer
+			</div>
+		</div>
+	</body>
+
+</html>

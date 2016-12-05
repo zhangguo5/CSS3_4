@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打印</title>
+		<!--该样式只会应用在打印时-->
+		<style type="text/css" media="print">
+			.noprint
+			{
+				display:none;
+			}
+			div{
+				font-size:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			Installing Cordova Cordova command-line runs on Node.js and is available on NPM. Follow platform specific guides to install additional platform dependencies. Open a command prompt or Terminal, and type npm install -g cordova.
+		</div>
+		<button onclick="print();" class="noprint">打印</button>
+	</body>
+</html>

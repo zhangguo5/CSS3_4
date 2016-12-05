@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>媒介查询</title>
+		<style type="text/css">
+			#div1 {
+				background: lightblue;
+				height: 100px;
+			}
+			
+			@media only screen and (min-width: 300px) and (max-width: 640px) {
+				#div1 {
+					background: lightgreen;
+					height: 200px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			Hello World!
+		</div>
+	</body>
+
+</html>
